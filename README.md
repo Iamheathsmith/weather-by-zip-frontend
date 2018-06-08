@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/Iamheathsmith/weather-by-zip-frontend.svg?branch=master)](https://travis-ci.org/Iamheathsmith/weather-by-zip-frontend)
 
-### [Link to live site hosted on Heroku.com](https://weather-for-you-app.herokuapp.com/)
+### [Link to live site hosted on Heroku.com](https://zip-weather-frontend.herokuapp.com/)
 
 ## Overview
 Weather for you is a basic React app that is built with Redux. We use the [Open WeatherMap current weather API](https://openweathermap.org/api), [Google Time Zone API](https://developers.google.com/maps/documentation/timezone/start?hl=en_US) and [Google Elevation API](https://developers.google.com/maps/documentation/elevation/start) to create a weather page that has all the info that you will ever need for a location based of a Zip Code.
