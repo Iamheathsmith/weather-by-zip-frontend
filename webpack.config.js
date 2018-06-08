@@ -15,7 +15,6 @@ let plugins = [
   new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
   new DefinePlugin({
     __DEBUG__: JSON.stringify(!production),
-    __API_URL__: JSON.stringify(process.env.API_URL),
     __API_KEY__: JSON.stringify(process.env.API_KEY),
   }),
 ];
@@ -46,15 +45,6 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractPlugin.extract(['css-loader', 'sass-loader']),
-      },
-      {
-        test: /\.(png|jpg|svg|jpeg)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: 'image/[name].[hash].[ext]',
-          },
-        }],
       },
     ],
   },

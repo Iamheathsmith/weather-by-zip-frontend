@@ -2,6 +2,7 @@ import '../style/base/_reset.scss';
 import '../style/main.scss';
 
 import React from 'react';
+import Nav from './nav/index';
 import Content from './content';
 import {Provider} from 'react-redux';
 import createStore from '../lib/app-create-store';
@@ -18,6 +19,7 @@ export default class App extends React.Component {
         <Provider store={store}>
           <BrowserRouter>
             <React.Fragment>
+              <Nav />
               <Route exact path="/" component={Content}/>
             </React.Fragment>
           </BrowserRouter>

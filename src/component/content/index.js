@@ -23,7 +23,6 @@ class Content extends React.Component {
   }
 
   handleError() {
-    console.log('in the error');
     this.setState({
       error: true,
     });
@@ -32,13 +31,12 @@ class Content extends React.Component {
   render() {
     return (
       <div className="main">
-        <header>Find your Weather 2.0</header>
+        <header>Enter your Zip here to be Zipped away!</header>
 
         <div className="name-search">
           <div className={this.props.location.length === 1 ? 'input-area' : 'start-area'}>
             <GetLocation
               wrongZip={this.handleError}
-              onComplete={this.props.addLocation}
             />
           </div>
 
@@ -46,7 +44,6 @@ class Content extends React.Component {
             <h1 className="location-name">That Zip Code does not Exist</h1>
           )}
 
-          {/* for location */}
           <div className="location">
             {this.props.location.length === 1 && !this.state.error ?
               <h1 className="location-name">{this.props.location[0].weather.name}</h1>
@@ -55,8 +52,6 @@ class Content extends React.Component {
             }
           </div>
         </div>
-
-        {/* for days */}
 
         {renderIf(this.props.location.length && !this.state.error,
           <div className="days">
@@ -81,8 +76,4 @@ let mapStateToProps = state => ({
   location: state.location,
 });
 
-const mapDispatchToProps = dispatch => ({
-  addLocation : search => dispatch(locationActions.addLocationAction(search)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Content);
+export default connect(mapStateToProps, null)(Content);

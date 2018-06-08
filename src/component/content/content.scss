@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Sigmar+One');
 
 .location-name {
+  display: inline-block;
   font-family: 'Sigmar One', cursive;
   margin-top: 30px;
   margin-left: 50px;
   font-size: 40px;
   margin-bottom: 30px;
+  opacity: 0;
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 
@@ -18,7 +24,6 @@ header {
 }
 
 .days {
-  width: 72%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +45,7 @@ header {
 
 .start-area {
   margin: 0 auto;
-  width: 300px;
+  width: 340px;
 }
 
 @media screen and (max-width: 640px) {
@@ -52,6 +57,12 @@ header {
 
   .location-name {
     font-size: 9vw;
+    opacity: 0;
+    display: inline-block;
+    animation-name: bounceIn;
+    animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -71,5 +82,24 @@ header {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
+  }
+}
+
+@keyframes bounceIn{
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
   }
 }

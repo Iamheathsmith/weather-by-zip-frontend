@@ -29,13 +29,18 @@ class GetLocation extends React.Component {
       alert('need to have zip to search');
       return;
     }
-    console.log('this is state', this.state);
     this.props.addLocation(this.state)
       .then(() => this.setState({
         zip: '',
         country: '',
       }))
-      .catch(error => this.props.wrongZip());
+      .catch(error => {
+        this.props.wrongZip();
+        this.setState({
+          zip: '',
+          country: '',
+        });
+      });
   }
 
   render() {
@@ -48,8 +53,7 @@ class GetLocation extends React.Component {
 
           <input
             type="text"
-            pattern="[a-zA-Z]{1,16}" required
-            // autoComplete="off"
+            pattern="[0-9]{1,5}" required
             name="zip"
             placeholder="zip"
             value={this.state.zip}
@@ -58,7 +62,6 @@ class GetLocation extends React.Component {
           <input
             type="text"
             maxLength="2"
-            // pattern="^[a-zA-Z]{2}$" required
             autoComplete="off"
             name="country"
             placeholder="Country code"
@@ -74,7 +77,6 @@ class GetLocation extends React.Component {
 
 let mapStateToProps = state => ({
   location: state.location,
-  zip: state.zip,
 });
 
 const mapDispatchToProps = dispatch => ({
