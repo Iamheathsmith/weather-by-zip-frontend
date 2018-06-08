@@ -10,7 +10,7 @@ export const addLocationAction = search => dispatch => {
     zip: search.zip,
     country: search.country,
   };
-  return superagent.get(`${process.env.API_URL}/Get-weather`)
+  return superagent.get(`${__API_URL__}/Get-weather`)
     .query(queryData)
     .then(res => {
       return dispatch(addLocation(res.body));
