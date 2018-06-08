@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Khand|Sigmar+One');
+
+.day-item {
+  width: 710px;
+  outline: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left-side {
+  margin-top: 20px;
+  background-color: #f8fbff;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 260px;;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.left {
+  margin: 5px;
+}
+
+p {
+  display: inline;
+  text-decoration: underline;
+}
+
+.right-side {
+  font-size: 23px;
+  font-family: 'Khand', sans-serif;
+  background-color: #f8fbff;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: inline-block;
+  width: 400px;
+  height: 260px;;
+  padding: 10px;
+  vertical-align: top;
+  margin: 20px;
+}
+
+.temp-saying {
+  margin: 5px
+}
+
+.temp-now {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
+
+.high {
+  display: inline-block;
+  color: red;
+}
+
+.wind {
+  clear: both;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.low {
+  display: inline-block;
+  color: blue;
+}
+
+.temps {
+  display: inline-block;
+  font-size: 24px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.day-saying {
+  margin-top: 20px;
+}
+
+.humidity {
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.conditions {
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 705px) {
+  .day-item {
+    outline: none
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .right-side {
+    width: 300px;
+    height: 280px;
+  }
+}
