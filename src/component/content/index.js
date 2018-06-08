@@ -58,18 +58,20 @@ class Content extends React.Component {
 
         {/* for days */}
 
-        <div className="days">
-          {this.props.location.length === 1 ?
-            this.props.location.map((item, idx) =>
-              <React.Fragment key={idx}>
-                <Weather
-                  weatherItem={item}
-                />
-              </React.Fragment>)
-            :
-            undefined
-          }
-        </div>
+        {renderIf(this.props.location.length && !this.state.error,
+          <div className="days">
+            {this.props.location.length === 1 ?
+              this.props.location.map((item, idx) =>
+                <React.Fragment key={idx}>
+                  <Weather
+                    weatherItem={item}
+                  />
+                </React.Fragment>)
+              :
+              undefined
+            }
+          </div>
+        )}
       </div>
     );
   }

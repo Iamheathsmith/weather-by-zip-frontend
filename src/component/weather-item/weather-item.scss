@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Khand|Sigmar+One');
+
 .day-item {
+  width: 710px;
+  outline: 1px solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left-side {
   margin-top: 20px;
   background-color: #f8fbff;
   box-shadow: 1px 1px 5px 1px grey;
@@ -13,6 +23,40 @@
   margin-bottom: 20px;
 }
 
+.left {
+  margin: 5px;
+}
+
+p {
+  display: inline;
+  text-decoration: underline;
+}
+
+.right-side {
+  font-size: 23px;
+  font-family: 'Khand', sans-serif;
+  background-color: #f8fbff;
+  box-shadow: 1px 1px 5px 1px grey;
+  border-radius: 3px;
+  border: 1px solid black;
+  display: inline-block;
+  width: 400px;
+  height: 260px;;
+  padding: 10px;
+  vertical-align: top;
+  margin: 20px;
+}
+
+.temp-saying {
+  margin: 5px
+}
+
+.temp-now {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+}
+
 
 .high {
   display: inline-block;
@@ -20,10 +64,11 @@
 }
 
 .wind {
-  font-size: 12px;
-  margin-top: 3px;
+  clear: both;
   display: inline-block;
   float: right;
+  margin-right: 10px;
+  font-size: 12px;
 }
 
 .low {
@@ -39,68 +84,33 @@
   margin-right: 10px;
 }
 
-.image {
-  display: inline-block;
-  width: 60px;
-  margin-left: 10px;
-}
-
-.saying {
-  font-size: 14px;
-  line-height: 16px;
-  font-family: inherit;
+.day-saying {
+  margin-top: 20px;
 }
 
 .humidity {
   text-decoration: underline;
   display: inline-block;
-  float: right;
-  margin-top: -30px;
+  margin-top: 10px;
   font-size: 12px;
   margin-right: 10px;
 }
 
-.rain-holder {
-  height: 20px;
-  border: 1px solid;
-  border-radius: 1px;
-  margin-top: -15px;
-  margin-bottom: 10px;
-}
-
-.rain-total {
-  display: inline-block;
-  font-size: 10px;
-  float: left;
-  padding-top: 5px;
-  padding-left: 5px;
-}
-
-.day-day {
-  font-family: 'Amatic SC', cursive;
-  font-size: 22px;
-}
-
-.rain-morning {
-  display: inline-block;
-  font-size: 10px;
-  float: right;
-  padding-top: 5px;
-  padding-right: 5px;
-}
-
-section {
-  background-color: #cedfff;
-  border: 1px solid;
-  padding: 5px;
-  height: 95px;
-  border-radius: 2px;
-  margin-bottom: 20px;
-}
-
 .conditions {
   display: inline-block;
-  font-size: 12px;
-  float: left;
-  margin-top: 4px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  .day-item {
+    outline: none
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .right-side {
+    width: 300px;
+    height: 280px;
+  }
 }
