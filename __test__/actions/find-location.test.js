@@ -14,14 +14,4 @@ describe('find-location action', () => {
       expect(testData.type).toBe('ADD_LOCATION');
     });
   });
-  describe('addLocation action', () => {
-    it('should build a action with the data sent in.', () => {
-      const store = mockStore();
-      return store.dispatch(locationAction.addLocationAction({zip: 98109}))
-        .then(() => {
-          const actions = store.getActions();
-          expect(actions[0].type).toEqual('ADD_LOCATION');
-        });
-    });
-  });
 });
