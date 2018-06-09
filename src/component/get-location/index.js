@@ -21,10 +21,6 @@ class GetLocation extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // if (this.state.country === '') {
-    //   alert('need to have state/county code');
-    //   return;
-    // }
     if (this.state.zip === '') {
       alert('need to have zip to search');
       return;
