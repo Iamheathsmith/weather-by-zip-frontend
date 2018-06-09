@@ -1,10 +1,6 @@
 import * as locationAction from '../../src/action/find-location';
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
 require('jest');
 
-const middlewares = [thunk];
-const mockStore = configureMockStore(middlewares);
 
 describe('find-location action', () => {
   describe('addLocation action', () => {
